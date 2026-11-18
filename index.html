@@ -29,18 +29,27 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: "Inter", system-ui, -apple-system, sans-serif;
-      background: var(--bg);
+      background: #1f232a;
       color: var(--text);
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
     h1, h2 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 700; line-height: 1.1; }
 
+    /* Fixed background image behind the whole page */
+    .page-bg {
+      position: fixed; inset: 0; z-index: -1;
+      background: url("hero.jpg") center / cover no-repeat, #3a4048;
+    }
+
     /* Header */
     header {
-      position: absolute; top: 0; left: 0; right: 0; z-index: 2;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
       display: flex; align-items: center; gap: 12px;
       padding: 20px 24px;
+      background: rgba(25, 32, 40, 0.35);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
     }
     .logo-mark {
       width: 40px; height: 40px; border-radius: 8px;
@@ -56,11 +65,11 @@
       position: relative; min-height: 100vh;
       display: flex; align-items: center;
       padding: 120px 24px 80px;
-      background:
-        linear-gradient(rgba(35, 45, 55, 0.55), rgba(35, 45, 55, 0.55)),
-        url("hero.jpg") center / cover no-repeat,
-        var(--bg);
+      background: rgba(30, 45, 60, 0.45);
     }
+
+    /* Darker translucent layer over the image for the content below the hero */
+    .content { background: rgba(28, 31, 38, 0.88); }
     .hero-inner { max-width: 1100px; width: 100%; margin: 0 auto; }
     .hero h1 { font-size: clamp(44px, 8vw, 72px); margin-bottom: 24px; }
     .hero .tagline { font-size: clamp(20px, 2.4vw, 24px); max-width: 700px; margin-bottom: 20px; }
@@ -102,7 +111,7 @@
     .contact svg { width: 20px; height: 20px; }
 
     footer {
-      background: var(--bg-dark); text-align: center;
+      background: rgba(20, 22, 27, 0.95); text-align: center;
       padding: 32px 24px; color: var(--muted); font-size: 14px;
     }
 
@@ -113,6 +122,8 @@
   </style>
 </head>
 <body>
+
+  <div class="page-bg" aria-hidden="true"></div>
 
   <header>
     <div class="logo-mark" aria-hidden="true">CC</div>
@@ -129,6 +140,7 @@
       </div>
     </section>
 
+    <div class="content">
     <section class="text">
       <div class="container">
         <h2>Who We Are</h2>
@@ -157,6 +169,7 @@
         pt@collectivecapacity.se
       </a>
     </section>
+    </div>
   </main>
 
   <footer>
