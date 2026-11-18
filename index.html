@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collective Capacity | Movement Program</title>
+  <meta name="description" content="A structured 12-week movement program where leadership teams and employees build sustainable routines together.">
+  <meta property="og:title" content="Collective Capacity | Movement Program">
+  <meta property="og:description" content="Building sustainable routines and collective capacity through movement.">
+  <meta property="og:url" content="https://collectivecapacity.se/">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta property="og:image" content="https://collectivecapacity.se/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #52565c;
+      --bg-dark: #44484e;
+      --text: #f4f2ee;
+      --muted: #d3d2cf;
+      --sand: #d8c6aa;
+      --sand-dark: #c9b493;
+      --ink: #2b2b2b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2 { font-family: "Space Grotesk", "Inter", sans-serif; font-weight: 700; line-height: 1.1; }
+
+    /* Header */
+    header {
+      position: absolute; top: 0; left: 0; right: 0; z-index: 2;
+      display: flex; align-items: center; gap: 12px;
+      padding: 20px 24px;
+    }
+    .logo-mark {
+      width: 40px; height: 40px; border-radius: 8px;
+      display: grid; place-items: center;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 16px;
+    }
+    .logo-text { font-family: "Space Grotesk", sans-serif; font-weight: 500; font-size: 20px; }
+
+    /* Hero */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 120px 24px 80px;
+      background:
+        linear-gradient(rgba(35, 45, 55, 0.55), rgba(35, 45, 55, 0.55)),
+        url("hero.jpg") center / cover no-repeat,
+        var(--bg);
+    }
+    .hero-inner { max-width: 1100px; width: 100%; margin: 0 auto; }
+    .hero h1 { font-size: clamp(44px, 8vw, 72px); margin-bottom: 24px; }
+    .hero .tagline { font-size: clamp(20px, 2.4vw, 24px); max-width: 700px; margin-bottom: 20px; }
+    .hero .intro { color: var(--muted); font-size: 17px; max-width: 660px; margin-bottom: 40px; }
+    .button {
+      display: inline-block; padding: 12px 32px; border-radius: 6px;
+      background: var(--sand); color: var(--ink);
+      font-weight: 500; text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .button:hover { background: var(--sand-dark); }
+
+    /* Sections */
+    section.text { padding: 110px 24px; }
+    .container { max-width: 760px; margin: 0 auto; }
+    section.text h2 { font-size: clamp(28px, 3.5vw, 34px); margin-bottom: 24px; }
+    section.text p { color: var(--muted); font-size: 17px; }
+
+    .philosophy { padding: 80px 24px 110px; }
+    .philosophy h2 { text-align: center; font-size: clamp(28px, 3.5vw, 34px); margin-bottom: 56px; }
+    .philosophy blockquote {
+      max-width: 860px; margin: 0 auto 40px;
+      border-left: 3px solid var(--sand);
+      padding: 4px 0 4px 22px;
+      font-size: clamp(20px, 2.4vw, 26px);
+    }
+
+    /* Contact and footer */
+    .contact {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center; padding: 64px 24px;
+    }
+    .contact p { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+    .contact a {
+      color: var(--text); text-decoration: none; font-size: 18px;
+      display: inline-flex; align-items: center; gap: 10px;
+    }
+    .contact a:hover { color: var(--sand); }
+    .contact svg { width: 20px; height: 20px; }
+
+    footer {
+      background: var(--bg-dark); text-align: center;
+      padding: 32px 24px; color: var(--muted); font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      section.text { padding: 72px 24px; }
+      .philosophy { padding: 56px 24px 72px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-mark" aria-hidden="true">CC</div>
+    <span class="logo-text">Collective Capacity</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Collective Capacity</h1>
+        <p class="tagline">Building sustainable routines and collective capacity through movement</p>
+        <p class="intro">Collective Capacity is a structured 12-week program where leadership teams and employees build sustainable routines around movement, strength, endurance and recovery, together. We focus on long-term capacity, not short-term fixes, helping organizations function better even when the pace is high.</p>
+        <a class="button" href="#contact">Get in Touch</a>
+      </div>
+    </section>
+
+    <section class="text">
+      <div class="container">
+        <h2>Who We Are</h2>
+        <p>Collective Capacity is built on the belief that how teams move, recover and manage energy together directly affects how organizations function. We work at the intersection of movement and modern work, focusing on sustainable routines that support focus, collaboration and long-term capacity. No shortcuts. No quick fixes.</p>
+      </div>
+    </section>
+
+    <section class="text">
+      <div class="container">
+        <h2>What We Do</h2>
+        <p>Collective Capacity delivers a structured 12-week movement program for organizations. Together with leadership teams and employees, we build shared, sustainable routines around movement, strength, endurance and recovery. The program strengthens team dynamics and creates a physical foundation that holds in real working life, even when the pace is high.</p>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <h2>Our Philosophy</h2>
+      <blockquote>"Performance is an outcome, not the starting point"</blockquote>
+      <blockquote>"Sustainable capacity beats short-term performance"</blockquote>
+      <blockquote>"We don't build quick wins. We build what lasts"</blockquote>
+    </section>
+
+    <section class="contact" id="contact">
+      <p>Get in touch</p>
+      <a href="mailto:pt@collectivecapacity.se">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        pt@collectivecapacity.se
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Collective Capacity. Building sustainable routines through movement.
+  </footer>
+
+</body>
+</html>
